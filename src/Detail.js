@@ -505,9 +505,10 @@ const Detail = (props) => {
         {/* for  episode */}
           <select 
           value={serieslink}
-            onChange={ (event)=>{setserieslink(`https://gomo.to/show/`+`${props.imval}/`+`${season}`+`-`+event.target.value );}}
+            //onChange={ (event)=>{setserieslink(`https://gomo.to/show/`+`${props.imval}/`+`${season}`+`-`+event.target.value );}}
            //onChange={ (event)=>{setserieslink(`https://moviehungershaven.xyz/itv/tvs1.php?imdbid=`+`${props.imval}&season=`+`${season}&episode=`+event.target.value );}}
-            style={{
+           onChange={ (event)=>{setserieslink(`https://gomo.to/show/${props.imval}/${season}-${event.target.value}`);}}
+           style={{
               position: "absolute",
               top: "5px",
               right: "12vw",
